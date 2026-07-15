@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="くるっと回して今日のお昼を決める、夏休みのお昼ごはんルーレット。">
+  <title>なつやすみ おひるルーレット</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="sun" aria-hidden="true"></div>
+  <div class="cloud cloud-one" aria-hidden="true"></div>
+  <div class="cloud cloud-two" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <header class="hero">
+      <p class="date-stamp">SUMMER LUNCH CLUB</p>
+      <h1><span>なつやすみ</span><br>おひるルーレット</h1>
+      <p class="lead">きょう、なに食べる？<br class="mobile-only"> くるっと回して決めちゃおう！</p>
+    </header>
+
+    <section class="game" aria-label="お昼ごはんルーレット">
+      <div class="wheel-area">
+        <div class="tape tape-left" aria-hidden="true"></div>
+        <div class="pointer" aria-hidden="true"></div>
+        <div class="wheel-frame">
+          <div class="wheel" id="wheel" role="img" aria-label="12種類のお昼ごはんが書かれたルーレット">
+            <div class="wheel-labels" id="wheelLabels" aria-hidden="true"></div>
+            <div class="wheel-center"><span>おひる</span><b>?</b></div>
+          </div>
+        </div>
+        <button class="spin-button" id="spinButton" type="button">
+          <span class="button-star">★</span><span>ルーレットを回す！</span><span class="button-arrow">↗</span>
+        </button>
+        <p class="hint">ボタンを押すと、今日のメニューが決まるよ</p>
+      </div>
+
+      <aside class="result-card" id="resultCard" aria-live="polite">
+        <div class="tape tape-right" aria-hidden="true"></div>
+        <p class="result-kicker">TODAY'S LUNCH</p>
+        <div class="result-empty" id="resultEmpty">
+          <span class="empty-face">◡̈</span>
+          <h2>なにが出るかな？</h2>
+          <p>ルーレットを回してね！</p>
+        </div>
+        <div class="result-content" id="resultContent" hidden>
+          <div class="food-icon" id="foodIcon"></div>
+          <p class="today-label">きょうのおひるは…</p>
+          <h2 id="foodName"></h2>
+          <div class="tags"><span id="timeTag"></span><span id="levelTag"></span></div>
+          <div class="recipe-box">
+            <h3>つくりかた</h3>
+            <ol id="recipeSteps"></ol>
+          </div>
+          <p class="safety" id="safetyNote"></p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="rules" aria-labelledby="rules-title">
+      <p class="rules-number">3</p>
+      <div><h2 id="rules-title">おやくそく</h2><p>安全に、おいしく作るための3つのルール</p></div>
+      <ul>
+        <li><b>01</b><span>作る前に<br>手をあらおう</span></li>
+        <li><b>02</b><span>火と包丁は<br>大人といっしょ</span></li>
+        <li><b>03</b><span>食べたあとは<br>おかたづけ</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer><span>☀</span><p>たのしい夏休みを！</p><small>SUMMER LUNCH ROULETTE</small></footer>
+  <script src="/script.js"></script>
+</body>
+</html>
